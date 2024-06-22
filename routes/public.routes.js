@@ -3,7 +3,7 @@ const router = require("express").Router()
 const publicController = require("./../controllers/public.controller")
 
 router
-    .post("/public-product", publicController.publicGetAllProduct)
-    .post("/publice-productDetail", publicController.publicGetProductDetails)
+    .get("/product", publicController.publicGetAllProduct)
+    .get("/product/:id", publicController.publicGetProductDetails)
 
 module.exports = router

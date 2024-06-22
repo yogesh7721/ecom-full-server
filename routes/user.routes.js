@@ -4,10 +4,10 @@ const router = require("express").Router()
 const userController = require("./../controllers/user.controller")
 
 router
-    .post("/user-order", userController.userGetAllOrders)
-    .get("/user-order-detail", userController.userGetOrderDetails)
-    .put("/user-password", userController.userUpdatePassword)
-    .post("/user-place-order", userController.userPlaceOrder)
-    .put("/user-cancel-order", userController.userCancelOrder)
+    .post("/get-order", userController.userGetAllOrders)
+    .get("/get-order-detail/:id", userController.userGetOrderDetails)
+    .put("/update-password", userController.userUpdatePassword)
+    .post("/place-order/:id", userController.userPlaceOrder)
+    .put("/order-cancel/:id", userController.userCancelOrder)
 
 module.exports = router

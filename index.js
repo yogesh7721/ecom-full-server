@@ -13,6 +13,8 @@ app.use(express.json())  // req.body madhe data takayche kam
 
 app.use("/api/admin", require("./routes/admin.routes"))
 app.use("/api/auth", require("./routes/auth.routes"))
+app.use("/api/public", require("./routes/public.routes"))
+app.use("/api/user", require("./routes/user.routes"))
 
 app.use("*", (req, res) => {
     res.status(404).json({ message: "Resours Not found" })
